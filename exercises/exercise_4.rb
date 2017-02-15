@@ -27,7 +27,7 @@ p @store6 = Store.create(name: 'Yaletown',
 end
 
 @womens_stores = Store.where(womens_apparel: true)
-                        .where("annual_revenue > ?", [1000000])
+                      .where("annual_revenue < ?", 1000000)
 
 @womens_stores.each do |store|
   puts "Store name: #{store.name}, Annual Revenue less than 1000000: #{store.annual_revenue}"
